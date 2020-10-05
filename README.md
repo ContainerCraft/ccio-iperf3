@@ -1,6 +1,4 @@
-# Unofficial Ookla SpeedTest CLI Client Testing Container
-[Ookla Speedtest](https://www.speedtest.net/apps/cli)
-[Python Pip](https://pypi.org/project/speedtest-cli)
+# Unofficial Iperf3 Network Performance Testing
 
 ### How to:
 Server:
