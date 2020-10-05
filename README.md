@@ -3,12 +3,12 @@
 [Python Pip](https://pypi.org/project/speedtest-cli)
 
 ### How to:
-With Docker
+Server:
 ```
-docker run -it --rm --rmi docker.io/containercraft/speedtest-cli
+podman run -it --rm -p 5251:5251/tcp docker.io/containercraft/iperf3
 ```
 
-With Podman
+Client
 ```
-podman run -it --rm --rmi docker.io/containercraft/speedtest-cli
+podman run -it --rm docker.io/containercraft/iperf-cli
 ```
