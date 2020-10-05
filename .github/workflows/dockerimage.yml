@@ -32,17 +32,17 @@ jobs:
         docker build . \
             --force-rm \
             --file ./Dockerfile \
-            --tag quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli \
-            --tag quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli:latest \
-            --tag quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli:latest-${{ env.varrundate }}-${{ env.githash }} \
-            --tag docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli \
-            --tag docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli:latest \
-            --tag docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli:latest-${{ env.varrundate }}-${{ env.githash }}
-    - name: Image Push | speedtest-cli
+            --tag quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3 \
+            --tag quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3:latest \
+            --tag quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3:latest-${{ env.varrundate }}-${{ env.githash }} \
+            --tag docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3 \
+            --tag docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3:latest \
+            --tag docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3:latest-${{ env.varrundate }}-${{ env.githash }}
+    - name: Image Push | iperf3
       run: |
-        docker push quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli;                                 \
-        docker push quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli:latest;                                 \
-        docker push quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli:latest-${{ env.varrundate }}-${{ env.githash }}; \
-        docker push docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli;                                 \
-        docker push docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli:latest;                                 \
-        docker push docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/speedtest-cli:latest-${{ env.varrundate }}-${{ env.githash }};
+        docker push quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3;                                 \
+        docker push quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3:latest;                                 \
+        docker push quay.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3:latest-${{ env.varrundate }}-${{ env.githash }}; \
+        docker push docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3;                                 \
+        docker push docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3:latest;                                 \
+        docker push docker.io/${{ secrets.DOCKERHUB_ORGANIZATION }}/iperf3:latest-${{ env.varrundate }}-${{ env.githash }};
